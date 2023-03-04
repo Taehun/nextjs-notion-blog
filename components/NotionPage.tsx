@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import Head from "next/head"
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -231,6 +232,9 @@ export const NotionPage: React.FC<types.PageProps> = ({
 
   return (
     <>
+      <Head>
+        <meta name="google-site-verification" content="2xLkEmFwzptzQyMYz09TpQJGaJ_Gx2VTc_OwY9TbNok" />
+      </Head>
       <PageHead
         pageId={pageId}
         site={site}
