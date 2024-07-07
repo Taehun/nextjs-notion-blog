@@ -46,7 +46,7 @@ async function createPreviewImage(
       }
     } catch (err) {
       // ignore redis errors
-      console.warn(`redis error get "${cacheKey}"`, err.message)
+      console.warn('redis error get %s', cacheKey, err.message)
     }
 
     const { body } = await got(url, { responseType: 'buffer' })
