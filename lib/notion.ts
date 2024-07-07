@@ -2,6 +2,7 @@ import { ExtendedRecordMap, SearchParams, SearchResults } from 'notion-types'
 import { mergeRecordMaps } from 'notion-utils'
 import pMap from 'p-map'
 import pMemoize from 'p-memoize'
+import { getVectorTable } from './vector-db'
 
 import {
   isPreviewImageSupportEnabled,
@@ -87,6 +88,8 @@ function extractTextFromRecordMap(recordMap: any): string {
 
 export async function getPage(pageId: string): Promise<ExtendedRecordMap> {
   let recordMap = await notion.getPage(pageId)
+  const vectorTable = await getVectorTable()
+  console.log(vectorTable)
 
   if (navigationStyle !== 'default') {
     // ensure that any pages linked to in the custom navigation header have

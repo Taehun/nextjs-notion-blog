@@ -33,6 +33,7 @@
     "@vercel/blob": "^0.23.3",
     "@vercel/og": "^0.5.20",
     "classnames": "^2.3.2",
+    "compromise": "^14.13.0",
     "date-fns": "^2.30.0",
     "expiry-map": "^2.0.0",
     "fathom-client": "^3.6.0",
