@@ -14,7 +14,7 @@ export async function getVectorTable() {
 }
 
 const apiKey = getEnv('OPENAI_API_KEY')
-export const embedding = new lancedb.embedding.OpenAIEmbeddingFunction(
-  apiKey,
-  'text-embedding-3-small'
-)
+export const embedding = new lancedb.embedding.OpenAIEmbeddingFunction({
+  apiKey: apiKey,
+  model: 'text-embedding-3-small'
+})
